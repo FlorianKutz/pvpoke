@@ -5,3 +5,9 @@ src/modules/config.php
 src/modules/config.php
 src/modules/config.php
 src/modules/config.php
+
+
+# Ignore DevSpace cache and log folder
+.devspace/
+.dockerignore
+devspace.yaml
