@@ -23,6 +23,7 @@
 				<option value="little" type="little" class="hide multi-battle">Little Cup Meta</option>
 				<option value="kanto" type="great" class="multi-battle">Kanto Cup Meta</option>
 				<option value="marsh" type="great" class="multi-battle">Silph Marsh Cup Meta</option>
+				<option value="nightfall" type="great" class="multi-battle">Silph Nightfall Cup Meta</option>
 			</select>
 			<div class="flex quick-fill-buttons">
 				<button class="save-btn save-custom">Save</button>
@@ -53,6 +54,8 @@
 			<select class="pokemon-level-cap-select">
 				<option value="40">Default Level Cap (40)</option>
 				<option value="41">Buddy Level Cap (41)</option>
+				<option value="50">New Level Cap (50)</option>
+				<option value="51">New Buddy Level Cap (51)</option>
 			</select>
 			<div class="check shield-baiting on"><span></span>Bait shields with low-energy moves</div>
 		</div>
