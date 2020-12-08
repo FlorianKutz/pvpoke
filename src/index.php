@@ -28,9 +28,9 @@
 	<!--Update section for updates-->
 	<h3>What's New</h3>
 
-	<h4>v1.18.11 (November 24, 2020)</h4>
+	<h4>v1.20.0 (December 5, 2020)</h4>
 	<ul>
-		<li>Gen 6 has been added to the site! You can now simulate them in individual battles. Note that game data is subject to change until release.</li>
+		<li>The new <a href="<?php echo $WEB_ROOT; ?>train/analysis/">Training Analysis</a> page allows you to view top performing Pokemon and teams from the site's Training Battles!</li>
 	</ul>
 
 	<h3>Latest Article</h3>

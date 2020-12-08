@@ -1,5 +1,5 @@
 <?php require_once 'modules/config.php';
-$SITE_VERSION = '1.18.11';
+$SITE_VERSION = '1.20.1';
 
 // This prevents caching on local testing
 if (strpos($WEB_ROOT, 'src') !== false) {
@@ -92,14 +92,14 @@ if(! isset($OG_IMAGE)){
 <link rel="manifest" href="<?php echo $WEB_ROOT; ?>data/manifest.json?v=2">
 
 <link rel="icon" href="<?php echo $WEB_ROOT; ?>img/favicon.png">
-<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/style.css?v=94">
+<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/style.css?v=95">
 
 <?php if(strpos($META_TITLE, 'Train') !== false): ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/train.css?v=14">
 <?php endif; ?>
 
 <?php if((isset($_SETTINGS->theme))&&($_SETTINGS->theme != "default")): ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/themes/<?php echo $_SETTINGS->theme; ?>.css?v=11">
+	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/themes/<?php echo $_SETTINGS->theme; ?>.css?v=12">
 <?php endif; ?>
 
 <script src="<?php echo $WEB_ROOT; ?>js/libs/jquery-3.3.1.min.js"></script>
@@ -135,26 +135,12 @@ if(! isset($OG_IMAGE)){
 
 	<?php endif; ?>
 
-	<?php if((strpos($_SERVER['REQUEST_URI'], 'mega') !== false) && (strpos($_SERVER['REQUEST_URI'], 'meganium') === false) && (strpos($_SERVER['REQUEST_URI'], 'venusaur_mega') === false) && (strpos($_SERVER['REQUEST_URI'], 'blastoise_mega') === false) && ((strpos($_SERVER['REQUEST_URI'], 'charizard_mega_x') === false)) && (strpos($_SERVER['REQUEST_URI'], 'charizard_mega_y') === false) && (strpos($_SERVER['REQUEST_URI'], 'beedrill_mega') === false) && (strpos($_SERVER['REQUEST_URI'], 'pidgeot_mega') === false) && (strpos($_SERVER['REQUEST_URI'], 'houndoom_mega') === false)):
+	<?php if((strpos($_SERVER['REQUEST_URI'], 'mega') !== false) && (strpos($_SERVER['REQUEST_URI'], 'meganium') === false) && (strpos($_SERVER['REQUEST_URI'], 'venusaur_mega') === false) && (strpos($_SERVER['REQUEST_URI'], 'blastoise_mega') === false) && ((strpos($_SERVER['REQUEST_URI'], 'charizard_mega_x') === false)) && (strpos($_SERVER['REQUEST_URI'], 'charizard_mega_y') === false) && (strpos($_SERVER['REQUEST_URI'], 'beedrill_mega') === false) && (strpos($_SERVER['REQUEST_URI'], 'pidgeot_mega') === false) && (strpos($_SERVER['REQUEST_URI'], 'houndoom_mega') === false)&& (strpos($_SERVER['REQUEST_URI'], 'abomasnow_mega') === false)):
 		$_SETTINGS->gamemaster = 'gamemaster-mega';
 		?>
 		// If "Mega" is contained in the URL, default to the mega gamemaster
 		settings.gamemaster = "gamemaster-mega";
 	<?php endif; ?>
-
-	<?php
-	// Use Kalos gamemaster for eligible Pokemon
-	$kalos = array("chesnaught","delphox","greninja","diggersby","talonflame","gogoat","pancham","pangoro","aegislash_blade","aegislash_shield","malamar","dragalge","auroros","sylveon","hawlucha","carbink","sliggoo","goodra","xerneas","yveltal","zygarde","zygarde_complete","diancie","volcanion");
-
-	foreach($kalos as $k){
-
-		if(strpos($_SERVER['REQUEST_URI'], $k) !== false){
-			$_SETTINGS->gamemaster = 'gamemaster-kalos'; ?>
-			settings.gamemaster = "gamemaster-kalos";
-			<?php
-		}
-	}
- 	?>
 
 
 	// If $_GET request exists, output as JSON into Javascript
@@ -187,7 +173,14 @@ if(! isset($OG_IMAGE)){
 			</div>
 			<div class="menu">
 				<a class="icon-battle" href="<?php echo $WEB_ROOT; ?>battle/">Battle</a>
-				<a class="icon-train" href="<?php echo $WEB_ROOT; ?>train/">Train</a>
+				<div class="parent-menu">
+					<a class="icon-train" href="<?php echo $WEB_ROOT; ?>train/">Train</a>
+					<div class="submenu">
+						<div class="submenu-wrap">
+							<a class="icon-rankings" href="<?php echo $WEB_ROOT; ?>train/analysis/">Top Performers</a>
+						</div>
+					</div>
+				</div>
 				<div class="parent-menu">
 					<a class="icon-rankings" href="<?php echo $WEB_ROOT; ?>rankings/">Rankings</a>
 					<div class="submenu">

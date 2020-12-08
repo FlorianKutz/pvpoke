@@ -11,6 +11,7 @@ require_once '../header.php';
 <div class="section home white">
 	<p>Select your team and options below to battle in a real-time simulation against a CPU opponent.</p>
 	<p>This tool is a training and learning resource intended to supplement your in-game battles. Experiment with new lineups or practice in a pressure free environment against a difficulty of your choice!</p>
+	<p>Check out <a href="<?php echo $WEB_ROOT; ?>train/">Training Analysis</a> for rankings and data recorded from these Training Battles.</p>
 </div>
 
 <div class="hide">
@@ -42,7 +43,6 @@ require_once '../header.php';
 				<option value="1500 all">Great League</option>
 				<option value="2500 all">Ultra League</option>
 				<option value="10000 all">Master League</option>
-				<option value="1500 marsh">Silph Marsh Cup</option>
 				<option value="1500 nightfall">Silph Nightfall Cup</option>
 			</select>
 			<h3 class="section-title">Difficulty</h3>
