@@ -29,6 +29,10 @@
 		"weight": 12
 	},
 	{
+		"speciesId": "sandslash_alolan_xl",
+		"chargedMoves": ["ICE_PUNCH", "BULLDOZE"]
+	},
+	{
 		"speciesId": "dewgong_xl",
 		"chargedMoves": ["ICY_WIND", "WATER_PULSE"]
 	},
@@ -75,8 +79,29 @@
 		"chargedMoves": ["BUBBLE_BEAM", "ICE_BEAM"]
 	},
 	{
+		"speciesId": "mr_rime",
+		"fastMove": "ICE_SHARD",
+		"chargedMoves": ["ICY_WIND","PSYCHIC"]
+	},
+	{
 		"speciesId": "suicune_shadow",
 		"chargedMoves": ["BUBBLE_BEAM", "ICE_BEAM"]
+	},
+	{
+		"speciesId": "hypno",
+		"chargedMoves": ["FIRE_PUNCH", "SHADOW_BALL"]
+	},
+	{
+		"speciesId": "hypno_xl",
+		"chargedMoves": ["FIRE_PUNCH", "SHADOW_BALL"]
+	},
+	{
+		"speciesId": "hypno_shadow",
+		"chargedMoves": ["FIRE_PUNCH", "ICE_PUNCH"]
+	},
+	{
+		"speciesId": "hypno_shadow_xl",
+		"chargedMoves": ["FIRE_PUNCH", "ICE_PUNCH"]
 	},
 	{
 		"speciesId": "rhyperior",
@@ -282,6 +307,21 @@
 		"weight": 10
 	},
 	{
+		"speciesId": "lapras_xl",
+		"fastMove": "ICE_SHARD",
+		"chargedMoves": ["SURF", "ICE_BEAM"]
+	},
+	{
+		"speciesId": "lapras_shadow",
+		"fastMove": "ICE_SHARD",
+		"chargedMoves": ["SURF", "ICE_BEAM"]
+	},
+	{
+		"speciesId": "lapras_shadow_xl",
+		"fastMove": "ICE_SHARD",
+		"chargedMoves": ["SURF", "ICE_BEAM"]
+	},
+	{
 		"speciesId": "arcanine",
 		"fastMove": "SNARL",
 		"chargedMoves": ["CRUNCH", "FLAMETHROWER"]
@@ -471,11 +511,19 @@
 		"weight": 2
 	},
 	{
+		"speciesId": "ferrothorn_xl",
+		"chargedMoves": ["POWER_WHIP","FLASH_CANNON"]
+	},
+	{
 		"speciesId": "cherrim_sunny",
 		"chargedMoves": ["WEATHER_BALL_FIRE","SOLAR_BEAM"]
 	},
 	{
 		"speciesId": "serperior",
+		"chargedMoves": ["GRASS_KNOT", "AERIAL_ACE"]
+	},
+	{
+		"speciesId": "serperior_xl",
 		"chargedMoves": ["GRASS_KNOT", "AERIAL_ACE"]
 	}
 ]

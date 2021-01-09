@@ -34,6 +34,15 @@
 		"chargedMoves": ["MUD_BOMB", "SLUDGE_BOMB"]
 	},
 	{
+		"speciesId": "sandslash_alolan_xl",
+		"chargedMoves": ["ICE_PUNCH", "BULLDOZE"]
+	},
+	{
+		"speciesId": "mr_rime",
+		"fastMove": "CONFUSION",
+		"chargedMoves": ["ICY_WIND","PSYCHIC"]
+	},
+	{
 		"speciesId": "dewgong_xl",
 		"chargedMoves": ["ICY_WIND", "WATER_PULSE"]
 	},
@@ -42,7 +51,7 @@
 		"chargedMoves": ["ICY_WIND", "WATER_PULSE"]
 	},
 	{
-		"speciesId": "poliwrath",
+		"speciesId": "sirfetchd",
 		"weight": 5
 	},
 	{
@@ -59,7 +68,35 @@
 		"chargedMoves": ["SURF", "SKULL_BASH"]
 	},
 	{
+		"speciesId": "lapras_xl",
+		"chargedMoves": ["SURF", "SKULL_BASH"]
+	},
+	{
+		"speciesId": "lapras_shadow_xl",
+		"chargedMoves": ["SURF", "SKULL_BASH"]
+	},
+	{
+		"speciesId": "hypno",
+		"chargedMoves": ["THUNDER_PUNCH", "SHADOW_BALL"]
+	},
+	{
+		"speciesId": "hypno_xl",
+		"chargedMoves": ["THUNDER_PUNCH", "SHADOW_BALL"]
+	},
+	{
+		"speciesId": "hypno_shadow",
+		"chargedMoves": ["THUNDER_PUNCH", "FIRE_PUNCH"]
+	},
+	{
+		"speciesId": "hypno_shadow_xl",
+		"chargedMoves": ["THUNDER_PUNCH", "FIRE_PUNCH"]
+	},
+	{
 		"speciesId": "ferrothorn",
+		"chargedMoves": ["POWER_WHIP", "FLASH_CANNON"]
+	},
+	{
+		"speciesId": "ferrothorn_xl",
 		"chargedMoves": ["POWER_WHIP", "FLASH_CANNON"]
 	},
 	{
@@ -97,6 +134,10 @@
 	},
 	{
 		"speciesId": "serperior",
+		"chargedMoves": ["GRASS_KNOT", "AERIAL_ACE"]
+	},
+	{
+		"speciesId": "serperior_xl",
 		"chargedMoves": ["GRASS_KNOT", "AERIAL_ACE"]
 	},
 	{
@@ -247,6 +288,11 @@
 	},
 	{
 		"speciesId": "crustle",
+		"fastMove": "SMACK_DOWN",
 		"weight": 2
+	},
+	{
+		"speciesId": "crustle_xl",
+		"fastMove": "SMACK_DOWN"
 	}
 ]

@@ -1,5 +1,5 @@
 <?php require_once 'modules/config.php';
-$SITE_VERSION = '1.20.1';
+$SITE_VERSION = '1.20.7.1';
 
 // This prevents caching on local testing
 if (strpos($WEB_ROOT, 'src') !== false) {
@@ -28,6 +28,10 @@ if(isset($_COOKIE['settings'])){
 		$_SETTINGS->pokeboxLastDateTime = 0;
 	}
 
+	if(! isset($_SETTINGS->ads)){
+		$_SETTINGS->ads = 1;
+	}
+
 	// Validate the gamemaster setting, only allow these options
 	$gamemasters = ["gamemaster", "gamemaster-mega"];
 
@@ -40,7 +44,8 @@ if(isset($_COOKIE['settings'])){
 		'animateTimeline' => 1,
 		'theme' => 'default',
 		'gamemaster' => 'gamemaster',
-		'pokeboxId' => 0
+		'pokeboxId' => 0,
+		'ads' => 1
 	];
 }
 
@@ -92,14 +97,14 @@ if(! isset($OG_IMAGE)){
 <link rel="manifest" href="<?php echo $WEB_ROOT; ?>data/manifest.json?v=2">
 
 <link rel="icon" href="<?php echo $WEB_ROOT; ?>img/favicon.png">
-<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/style.css?v=95">
+<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/style.css?v=102">
 
 <?php if(strpos($META_TITLE, 'Train') !== false): ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/train.css?v=14">
+	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/train.css?v=15">
 <?php endif; ?>
 
 <?php if((isset($_SETTINGS->theme))&&($_SETTINGS->theme != "default")): ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/themes/<?php echo $_SETTINGS->theme; ?>.css?v=12">
+	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/themes/<?php echo $_SETTINGS->theme; ?>.css?v=13">
 <?php endif; ?>
 
 <script src="<?php echo $WEB_ROOT; ?>js/libs/jquery-3.3.1.min.js"></script>
@@ -158,6 +163,8 @@ if(! isset($OG_IMAGE)){
 	}
 	?>
 </script>
+
+	<?php require_once 'modules/ads/base-code.php'; ?>
 
 </head>
 

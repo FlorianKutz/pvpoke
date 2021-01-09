@@ -35,16 +35,8 @@ switch($cup){
 		$league = 'Premier';
 		break;
 
-	case "flying":
-		$league = 'Flying Cup';
-		break;
-
-	case "halloween":
-		$league = 'Halloween Cup';
-		break;
-
-	case "sunrise":
-		$league = 'Silph Sunrise Cup';
+	case "holiday":
+		$league = 'Holiday Cup';
 		break;
 
 }
@@ -72,10 +64,13 @@ require_once '../header.php';
 <h1>Training Analysis</h1>
 <div class="section analysis-container white">
 
-	<select class="format-select hide">
-		<option value="1500 all" cup="all">Great League</option>
-		<option value="2500 all" cup="all">Ultra League</option>
-		<option value="10000 all" cup="all">Master League</option>
+	<select class="format-select">
+		<option value="1500" cup="all">Great League</option>
+		<option value="2500" cup="all">Ultra League</option>
+		<option value="10000" cup="all">Master League</option>
+		<option value="2500" cup="premier">Premier Cup (Ultra)</option>
+		<option value="10000" cup="premier">Premier Cup (Master)</option>
+		<option value="1500" cup="holiday">Holiday Cup</option>
 	</select>
 
 	<div class="date-updated">Last updated</div>
@@ -131,6 +126,8 @@ require_once '../header.php';
 	<p class="column-description"><b>Individual Rating - </b> The individual rating metric measures the damage output of a Pokemon in battle. 100% equals 1 Pokemon worth of damage. This metric also includes shields drawn by the Pokemon: 1 shield is treated as 50% of a Pokemon in Great League, and 40% of a Pokemon in Ultra and Master League. Pokemon with high average individual rating have strong damage output and shield pressure. However, high individual rating doesn't always correlate to success on a team.</p>
 
 	<p class="column-description"><b>Usage - </b> Usage by players and bots on teams of 3. A large sample size will yield higher confidence in the data. A <span class="low-volume">small sample size</span> may be the result of an individual player, and consequentially yield lower confidence in the data. The data is filtered by a mininum usage threshold.</p>
+
+	<?php require '../modules/ads/body-728.php'; ?>
 
 	<h3>Top Teams</h3>
 

@@ -46,6 +46,10 @@ switch($cup){
 		$league = 'Holiday Cup';
 		break;
 
+	case "cerberus":
+		$league = 'Cerberus Cup';
+		break;
+
 }
 
 $META_TITLE = $league . ' PvP Rankings';
@@ -70,8 +74,7 @@ require_once 'header.php';
 
 <h1>Rankings</h1>
 <div class="section league-select-container white">
-	<?php require 'modules/leagueselect.php'; ?>
-	<?php require 'modules/cupselect.php'; ?>
+	<?php require 'modules/formatselect.php'; ?>
 
 	<div class="ranking-categories">
 		<a class="selected" href="#" data="overall" scenario="leads">Overall</a>
@@ -105,6 +108,8 @@ require_once 'header.php';
 
 	<p>Click or tap the rankings below for more details.</p>
 
+	<div class="check on xl" style="margin-bottom:15px;"><span></span>Show XL Pokemon</div>
+
 	<div class="check on limited hide"><span></span>Show <div class="limited-title">Limited Pokemon</div>*</div>
 	<div class="asterisk limited hide">* Only a limited number of these Pokemon can be selected per team.</div>
 
@@ -135,6 +140,8 @@ require_once 'header.php';
 </div>
 
 <a href="#" class="button download-csv">Export to CSV</a>
+
+<?php require 'modules/ads/body-728.php'; ?>
 
 <div class="section about white">
 	<a class="toggle" href="#">About Rankings <span class="arrow-down">&#9660;</span><span class="arrow-up">&#9650;</span></a>

@@ -5,14 +5,10 @@
 		"weight": 2
 	},
 	{
-		"speciesId": "froslass",
-		"chargedMoves": ["AVALANCHE", "SHADOW_BALL"]
-	},
-	{
 		"speciesId": "lapras",
 		"fastMove": "ICE_SHARD",
 		"chargedMoves": ["SURF", "SKULL_BASH"],
-		"weight": 3
+		"weight": 5
 	},
 	{
 		"speciesId": "lapras_shadow",
@@ -27,24 +23,45 @@
 	{
 		"speciesId": "marowak_alolan",
 		"chargedMoves": ["SHADOW_BONE", "BONE_CLUB"],
-		"weight": 35
+		"weight": 38
+	},
+	{
+		"speciesId": "mr_rime",
+		"fastMove": "ICE_SHARD",
+		"chargedMoves": ["ICY_WIND","PSYCHIC"]
 	},
 	{
 		"speciesId": "chansey",
 		"fastMove": "POUND"
 	},
 	{
+		"speciesId": "litleo",
+		"fastMove": "FIRE_FANG"
+	},
+	{
+		"speciesId": "litleo_xl",
+		"fastMove": "FIRE_FANG"
+	},
+	{
 		"speciesId": "cloyster_shadow",
 		"chargedMoves": ["ICY_WIND", "FRUSTRATION"]
 	},
 	{
-		"speciesId": "vigoroth",
-		"chargedMoves": ["BODY_SLAM", "BULLDOZE"],
-		"weight": 40
+		"speciesId": "raichu",
+		"chargedMoves": ["THUNDER_PUNCH", "WILD_CHARGE"]
 	},
 	{
-		"speciesId": "diggersby_xl",
-		"weight": 10
+		"speciesId": "haunter",
+		"chargedMoves": ["SHADOW_PUNCH", "SLUDGE_BOMB"]
+	},
+	{
+		"speciesId": "munchlax",
+		"chargedMoves": ["BODY_SLAM", "BULLDOZE"]
+	},
+	{
+		"speciesId": "vigoroth",
+		"chargedMoves": ["BODY_SLAM", "BULLDOZE"],
+		"weight": 35
 	},
 	{
 		"speciesId": "gliscor",
@@ -76,15 +93,24 @@
 	},
 	{
 		"speciesId": "froslass",
-		"weight": 8
+		"chargedMoves": ["AVALANCHE", "SHADOW_BALL"],
+		"weight": 20
 	},
 	{
 		"speciesId": "articuno",
 		"weight": 1
 	},
 	{
+		"speciesId": "magnezone",
+		"weight": 3
+	},
+	{
 		"speciesId": "wigglytuff",
-		"weight": 10
+		"weight": 24
+	},
+	{
+		"speciesId": "castform_snowy",
+		"weight": 3
 	},
 	{
 		"speciesId": "abomasnow",
@@ -92,11 +118,11 @@
 	},
 	{
 		"speciesId": "skarmory",
-		"weight": 30
+		"weight": 20
 	},
 	{
 		"speciesId": "altaria",
-		"weight": 18
+		"weight": 30
 	},
 	{
 		"speciesId": "charizard",
@@ -104,6 +130,7 @@
 	},
 	{
 		"speciesId": "lanturn",
+		"fastMove": "SPARK",
 		"weight": 4
 	},
 	{
@@ -112,7 +139,7 @@
 	},
 	{
 		"speciesId": "obstagoon",
-		"weight": 20
+		"weight": 33
 	},
 	{
 		"speciesId": "snorlax",
@@ -128,11 +155,11 @@
 	},
 	{
 		"speciesId": "galvantula",
-		"weight": 6
+		"weight": 2
 	},
 	{
 		"speciesId": "graveler_alolan",
-		"weight": 12
+		"weight": 15
 	},
 	{
 		"speciesId": "golem_alolan",

@@ -42,8 +42,9 @@ function PokeMultiSelect(element){
 
 		while(window.localStorage.key(i) !== null){
 			var key = window.localStorage.key(i);
+			var content = window.localStorage.getItem(key);
 
-			if((key !== "undefined")&&(key.indexOf("google") == -1)){
+			if(content.indexOf("_") > -1){
 				$el.find(".quick-fill-select").append("<option value=\""+key+"\" type=\"custom\">"+key+"</option>");
 			}
 
@@ -653,6 +654,22 @@ function PokeMultiSelect(element){
 			$el.find(".quick-fill-select option[value='"+selectedGroup+"']").remove();
 			$el.find(".quick-fill-select option").first().prop("selected", "selected");
 			$el.find(".quick-fill-select").trigger("change");
+		});
+	});
+
+	// Clear all selections
+
+	$el.find(".clear-selection").click(function(e){
+		e.preventDefault();
+
+		modalWindow("Clear Custom Group", $(".multi-clear-confirm").first());
+
+		$(".modal .yes").click(function(e){
+			pokemonList = [];
+			self.updateListDisplay();
+			$el.find(".quick-fill-select option").first().prop("selected", "selected");
+
+			closeModalWindow();
 		});
 	});
 

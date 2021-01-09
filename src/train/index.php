@@ -11,7 +11,7 @@ require_once '../header.php';
 <div class="section home white">
 	<p>Select your team and options below to battle in a real-time simulation against a CPU opponent.</p>
 	<p>This tool is a training and learning resource intended to supplement your in-game battles. Experiment with new lineups or practice in a pressure free environment against a difficulty of your choice!</p>
-	<p>Check out <a href="<?php echo $WEB_ROOT; ?>train/">Training Analysis</a> for rankings and data recorded from these Training Battles.</p>
+	<p>Check out <a href="<?php echo $WEB_ROOT; ?>train/analysis/">Training Analysis</a> for rankings and data recorded from these Training Battles.</p>
 </div>
 
 <div class="hide">
@@ -40,10 +40,10 @@ require_once '../header.php';
 				<option value="10000 gobattleleague">GO Battle League (Master)</option>
 				<option value="2500 premier">Premier Cup (Ultra)</option>
 				<option value="10000 premier">Premier Cup (Master)</option>
+				<option value="1500 holiday">Holiday Cup</option>
 				<option value="1500 all">Great League</option>
 				<option value="2500 all">Ultra League</option>
 				<option value="10000 all">Master League</option>
-				<option value="1500 nightfall">Silph Nightfall Cup</option>
 			</select>
 			<h3 class="section-title">Difficulty</h3>
 			<select class="difficulty-select">
@@ -126,12 +126,14 @@ require_once '../header.php';
 	</div>
 </div>
 
+<?php require '../modules/ads/body-728.php'; ?>
+
 <div class="section white updates">
 	<h3>What's New</h3>
 
-	<h4>v1.17.6 (October 10, 2020)</h4>
+	<h4>v1.20.4 (December 24, 2020)</h4>
 	<ul>
-		<li>Training Battles for GO Battle League can now utilize preset teams to help you prepare for and recognize common teams of 3.</li>
+		<li>Updated the Training Battle interface to use the same switch sidebar as the game.</li>
 	</ul>
 </div>
 
