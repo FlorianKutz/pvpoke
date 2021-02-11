@@ -34,13 +34,19 @@
 	<!--Update section for updates-->
 	<h3>What's New</h3>
 
-	<h4>v1.20.6 (December 31, 2020)</h4>
+	<h4>v1.20.9 (February 11, 2020)</h4>
 	<ul>
-		<li>Rankings page now has 1 format dropdown.</li>
-		<li>Histograms in Multi-Battle and the Team Builder now show average Battle Rating.</li>
-		<li>Added a "clear" option for custom group selection.</li>
-		<li>Adding a new Pokemon to a custom group will properly clear previous Pokemon search.</li>
-		<li>Switching between "Multi Battle" and "Matrix Battle" will keep any selected custom group on the right side.</li>
+		<li>Damage multipliers from the Shadow boost or stat changes are no longer displayed as part of a Pokemon's stats. Instead, the multipliers are now shown in the Advanced/IV's section.</li>
+		<ul>
+			<li>Previously, Shadow Pokemon would appear to have higher Attack stats than their regular counterparts, which isn't functionally the case.</li>
+		</ul>
+		<li>Resolved interface issues where IV's and level cap settings weren't displayed correctly when selecting new Pokemon.</li>
+		<li>Custom ranking fixes:</li>
+		<ul>
+			<li>XL Pokemon now appear correctly in the custom rankings (when allowed).</li>
+			<li>Banning a Pokemon with the "Species" filter now also bans Shadow and XL versions of that Pokemon - no need to separately list their ID's.</li>
+		</ul>
+		<li>When adding new Pokemon to Matrix Battle, the new "Add &amp; Compare" button adds other IV spreads of that same Pokemon in a single click.</li>
 	</ul>
 
 	<h3>Latest Article</h3>

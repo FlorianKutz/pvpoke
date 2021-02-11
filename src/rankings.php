@@ -42,12 +42,24 @@ switch($cup){
 		$league = 'Master League Classic';
 		break;
 
-	case "holiday":
-		$league = 'Holiday Cup';
+	case "kanto":
+		$league = 'Kanto Cup';
+		break;
+
+	case "love":
+		$league = 'Love Cup';
 		break;
 
 	case "cerberus":
 		$league = 'Cerberus Cup';
+		break;
+
+	case "labyrinth":
+		$league = 'Silph Labyrinth Cup';
+		break;
+
+	case "goteamup":
+		$league = 'GO Stadium GOTeamUp';
 		break;
 
 }
@@ -104,7 +116,7 @@ require_once 'header.php';
 
 	<p class="description link hide"><b>Tournament Info:</b> <a href="#" target="_blank"></a></p>
 
-	<p>You can enter your GBL encounters <a href="https://docs.google.com/forms/d/e/1FAIpQLScc_gCvXLTUs5tHORiPpEmuF6yL6UJ0j0P03oSNDRQvNNHa0w/viewform" target="_blank">here</a> to help provide usage data for ranking updates.</p>
+	<p>Help provide usage data for the rankings at <a href="https://gobattlelog.com/pvpoke" target="_blank">gobattlelog.com</a>.</p>
 
 	<p>Click or tap the rankings below for more details.</p>
 

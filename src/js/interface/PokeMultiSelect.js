@@ -44,7 +44,9 @@ function PokeMultiSelect(element){
 			var key = window.localStorage.key(i);
 			var content = window.localStorage.getItem(key);
 
-			if(content.indexOf("_") > -1){
+			var groupRegex = new RegExp("([a-z_]*),([A-Z_]*),([A-Z_]*),([A-Z_]*)");
+
+			if(groupRegex.test(content)){
 				$el.find(".quick-fill-select").append("<option value=\""+key+"\" type=\"custom\">"+key+"</option>");
 			}
 
@@ -72,6 +74,12 @@ function PokeMultiSelect(element){
 			pokeSelector.clear();
 
 			$(".modal-content").append("<div class=\"center\"><div class=\"save-poke button\">Add Pokemon</div></div>");
+
+
+			if(interface.battleMode && interface.battleMode == "matrix"){
+				$(".modal-content").append("<div class=\"center\"><div class=\"compare-poke button\">Add & Compare</div></div>");
+			}
+
 
 
 			$(".modal .poke-search").focus();
@@ -114,7 +122,71 @@ function PokeMultiSelect(element){
 
 		});
 
+		// Add this Pokemon and other IV spreads
+
+		$(".modal .compare-poke").on("click", function(e){
+
+			// Make sure something's selected
+			if(! pokeSelector){
+				return false;
+			}
+
+			var pokemon = pokeSelector.getPokemon();
+
+			if(! pokemon){
+				return false;
+			}
+
+			pokemonList.push(pokemon);
+
+			// Add multiple IV spreads of the same Pokemon
+			var spreads = ["max"];
+
+			if(battle.getCP() < 10000){
+				spreads.push("def", "atk");
+			}
+
+			for(var i = 0; i < spreads.length; i++){
+				var newPokemon = new Pokemon(pokemon.speciesId, 0, battle);
+				newPokemon.initialize(false);
+
+				newPokemon.selectMove("fast", pokemon.fastMove.moveId);
+
+				if(pokemon.chargedMoves.length > 0){
+					newPokemon.selectMove("charged", pokemon.chargedMoves[0].moveId, 0);
+				}
+
+				if(pokemon.chargedMoves.length > 1){
+					newPokemon.selectMove("charged", pokemon.chargedMoves[1].moveId, 1);
+				}
+
+				newPokemon.setShadowType(pokemon.shadowType);
+				newPokemon.levelCap = pokemon.levelCap;
+
+				switch(spreads[i]){
+					case "max":
+						newPokemon.maximizeStat("overall");
+						break;
+
+					case "def":
+						newPokemon.maximizeStat("def");
+						break;
+
+					case "atk":
+						newPokemon.maximizeStat("atk");
+						break;
+				}
+
+				pokemonList.push(newPokemon);
+			}
+
+			closeModalWindow();
+
+			self.updateListDisplay();
+
+		});
 	}
+
 
 	// Display the selected Pokemon list
 
@@ -149,6 +221,11 @@ function PokeMultiSelect(element){
 				$item.find(".moves").append(moveList[n].displayName);
 			}
 
+
+			if(pokemon.isCustom){
+				$item.find(".moves").append("<br>Lvl "+pokemon.level+ " "+pokemon.ivs.atk+"/"+pokemon.ivs.def+"/"+pokemon.ivs.hp)
+			}
+
 			if(cliffhangerMode){
 				$item.find(".name").prepend("<span class=\"cliffhanger-points\">"+pokemonList[i].cliffhangerPoints+"</span>");
 			}
@@ -171,6 +248,70 @@ function PokeMultiSelect(element){
 			}
 		}
 
+		// Check team eligiblity
+
+		var context = interface.context;
+
+		$el.find(".team-warning").hide();
+
+		if((context == "team")&&(pokemonList.length > 0)){
+			// Check for any ineligible Pokemon
+			var eligibleList =  gm.generateFilteredPokemonList(battle, battle.getCup().include, battle.getCup().exclude);
+
+			for(var i = 0; i < pokemonList.length; i++){
+				var speciesId = pokemonList[i].speciesId;
+				var found = false;
+
+				for(var n = 0; n < eligibleList.length; n++){
+					if(eligibleList[n].speciesId == speciesId){
+						found = true;
+						break;
+					}
+				}
+
+				if(! found){
+					$el.find(".rank").eq(i).addClass("warning");
+					$el.find(".team-warning.ineligible").show();
+				}
+			}
+
+			// For Labyrinth Cup, check there are no repeated types
+			 if(battle.getCup().name == "labyrinth"){
+				var usedTypes = [];
+				var doubleTypes = [];
+
+				// First, gather any double used types
+				for(var i = 0; i < pokemonList.length; i++){
+					if(usedTypes.indexOf(pokemonList[i].types[0]) > -1){
+						doubleTypes.push(pokemonList[i].types[0]);
+					}
+
+					if(usedTypes.indexOf(pokemonList[i].types[1]) > -1){
+						doubleTypes.push(pokemonList[i].types[1]);
+					}
+
+					if(usedTypes.indexOf(pokemonList[i].types[0]) > -1 || usedTypes.indexOf(pokemonList[i].types[1]) > -1){
+
+						$el.find(".rank").eq(i).addClass("warning");
+						$el.find(".team-warning.labyrinth").show();
+					}
+
+					usedTypes.push(pokemonList[i].types[0]);
+
+					if(pokemonList[i].types[1] != "none"){
+						usedTypes.push(pokemonList[i].types[1]);
+					}
+				}
+
+				 // Mark Pokemon with double used types with a warning
+				 for(var i = 0; i < pokemonList.length; i++){
+					 if(doubleTypes.indexOf(pokemonList[i].types[0]) > -1 || doubleTypes.indexOf(pokemonList[i].types[1]) > -1){
+						 $el.find(".rank").eq(i).addClass("warning");
+						 $el.find(".team-warning.labyrinth").show();
+					 }
+				 }
+			 }
+		}
 
 		if(pokemonList.length >= maxPokemonCount){
 			$el.find(".add-poke-btn").hide();
@@ -319,6 +460,10 @@ function PokeMultiSelect(element){
 		}
 
 		$el.find(".quick-fill-select option[type='custom']").show();
+
+		if(pokemonList.length > 0){
+			self.updateListDisplay();
+		}
 
 		// Set all Pokemon to the new CP limit
 		for(var i = 0; i < pokemonList.length; i++){

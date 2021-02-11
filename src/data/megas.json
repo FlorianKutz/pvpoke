@@ -72,25 +72,6 @@
     "level25CP": 2640,
     "eliteMoves": ["SUBMISSION"]
 }, {
-    "dex": 130,
-    "speciesName": "Gyarados (Mega)",
-    "speciesId": "gyarados_mega",
-    "baseStats": {
-        "atk": 292,
-        "def": 247,
-        "hp": 216
-    },
-    "types": ["water", "dark"],
-    "fastMoves": ["BITE", "DRAGON_BREATH", "DRAGON_TAIL", "WATERFALL"],
-    "chargedMoves": ["CRUNCH", "DRAGON_PULSE", "HYDRO_PUMP", "OUTRAGE", "TWISTER", "AQUA_TAIL"],
-    "defaultIVs": {
-        "cp1500": [11.5, 11, 6, 14],
-        "cp2500": [19, 9, 13, 13]
-    },
-    "tags": ["shadoweligible", "mega"],
-    "level25CP": 3009,
-    "eliteMoves": ["DRAGON_TAIL", "DRAGON_PULSE", "AQUA_TAIL"]
-}, {
     "dex": 142,
     "speciesName": "Aerodactyl (Mega)",
     "speciesId": "aerodactyl_mega",
@@ -145,25 +126,6 @@
         "cp2500": [16, 7, 9, 11]
     },
     "eliteMoves": ["PSYSTRIKE", "SHADOW_BALL", "HYPER_BEAM"]
-}, {
-    "dex": 181,
-    "speciesName": "Ampharos (Mega)",
-    "speciesId": "ampharos_mega",
-    "baseStats": {
-        "atk": 294,
-        "def": 203,
-        "hp": 207
-    },
-    "types": ["electric", "dragon"],
-    "fastMoves": ["CHARGE_BEAM", "VOLT_SWITCH"],
-    "chargedMoves": ["DRAGON_PULSE", "FOCUS_BLAST", "POWER_GEM", "THUNDER", "ZAP_CANNON", "THUNDER_PUNCH"],
-    "defaultIVs": {
-        "cp1500": [13, 7, 7, 12],
-        "cp2500": [22, 5, 10, 6]
-    },
-    "tags": ["shadoweligible", "mega"],
-    "level25CP": 2688,
-    "eliteMoves": ["DRAGON_PULSE"]
 }, {
     "dex": 208,
     "speciesName": "Steelix (Mega)",

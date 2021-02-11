@@ -325,6 +325,29 @@ header {
   -o-transition: width 150ms cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
   transition: width 150ms cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
 }
+.poke .poke-stats .damage-adjustments {
+  display: flex;
+  border: 1px solid #888;
+  border-radius: 8px;
+  font-size: 10px;
+  justify-content: center;
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+.poke .poke-stats .damage-adjustments .adjustment {
+  padding: 5px;
+  width: 50%;
+}
+.poke .poke-stats .damage-adjustments .adjustment .value {
+  font-size: 14px;
+  font-weight: bold;
+}
+.poke .poke-stats .damage-adjustments .adjustment .value.buff {
+  color: #f1841c;
+}
+.poke .poke-stats .damage-adjustments .adjustment .value.debuff {
+  color: #0158d0;
+}
 .poke .poke-stats .types {
   text-align: center;
 }
@@ -341,6 +364,13 @@ header {
 }
 .poke .poke-stats h3.cp {
   text-align: center;
+}
+.poke .poke-stats h3.cp .identifier {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  background: #9e34ef;
 }
 .poke .poke-stats h3.section-title {
   font-size: 14px;
@@ -495,6 +525,7 @@ header {
   justify-content: space-between;
 }
 .poke .options .shield-baiting,
+.poke .options .optimize-timing,
 .poke .options .priority,
 .poke .options .negate-fast-moves {
   text-align: left;
@@ -585,7 +616,7 @@ header {
   display: block;
 }
 .poke.multi .poke-count.error {
-  color: #b9008f;
+  color: #e66a19;
 }
 .poke.multi .format-select {
   margin-top: 62px;
@@ -626,6 +657,9 @@ header {
   border-left: none;
   box-shadow: 0px 2px;
 }
+.poke.multi .rankings-container .rank.warning {
+  border: 3px solid #e66a19;
+}
 .poke.multi .rankings-container .rank .name-container {
   float: none;
 }
@@ -661,6 +695,16 @@ header {
 }
 .poke.multi .quick-fill-buttons {
   justify-content: space-around;
+}
+.poke.multi .team-warning {
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 8px;
+  border: 3px solid #e66a19;
+  color: #e66a19;
+  margin-bottom: 5px;
 }
 .poke .energy-label {
   margin-top: 15px;
@@ -2755,6 +2799,10 @@ a.download-csv {
 }
 .modal .pokebox-import[select-mode=single] .multi {
   display: none;
+}
+.modal .button.compare-poke {
+  font-size: 14px;
+  padding: 5px;
 }
 
 /* TEXTS & FONTS */

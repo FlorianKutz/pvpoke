@@ -142,10 +142,6 @@
 		"fastMove": "CHARM"
 	},
 	{
-		"speciesId": "roserade",
-		"fastMove": "RAZOR_LEAF"
-	},
-	{
 		"speciesId": "gliscor",
 		"fastMove": "WING_ATTACK",
 		"chargedMoves": ["NIGHT_SLASH", "EARTHQUAKE"]
@@ -262,6 +258,10 @@
 	},
 	{
 		"speciesId": "mamoswine_xl",
+		"chargedMoves": ["AVALANCHE","BULLDOZE"]
+	},
+	{
+		"speciesId": "mamoswine_shadow",
 		"chargedMoves": ["AVALANCHE","BULLDOZE"]
 	},
 	{

@@ -10,12 +10,12 @@
 	},
 	{
 		"speciesId": "machamp",
-		"chargedMoves": ["CROSS_CHOP", "ROCK_SLIDE"],
+		"chargedMoves": ["CROSS_CHOP", "PAYBACK"],
 		"weight": 2
 	},
 	{
 		"speciesId": "machamp_shadow",
-		"chargedMoves": ["CROSS_CHOP", "ROCK_SLIDE"]
+		"chargedMoves": ["CROSS_CHOP", "PAYBACK"]
 	},
 	{
 		"speciesId": "palkia",
@@ -127,10 +127,6 @@
 	{
 		"speciesId": "gardevoir_shadow_xl",
 		"fastMove": "CHARM"
-	},
-	{
-		"speciesId": "roserade",
-		"fastMove": "RAZOR_LEAF"
 	},
 	{
 		"speciesId": "gliscor",
@@ -281,6 +277,10 @@
 	},
 	{
 		"speciesId": "mamoswine",
+		"chargedMoves": ["AVALANCHE","BULLDOZE"]
+	},
+	{
+		"speciesId": "mamoswine_shadow",
 		"chargedMoves": ["AVALANCHE","BULLDOZE"]
 	},
 	{

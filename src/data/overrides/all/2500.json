@@ -66,12 +66,14 @@
 	},
 	{
 		"speciesId": "machamp",
-		"chargedMoves": ["CROSS_CHOP", "ROCK_SLIDE"],
+		"fastMove": "COUNTER",
+		"chargedMoves": ["CROSS_CHOP", "PAYBACK"],
 		"weight": 4
 	},
 	{
 		"speciesId": "machamp_shadow",
-		"chargedMoves": ["CROSS_CHOP", "ROCK_SLIDE"],
+		"fastMove": "COUNTER",
+		"chargedMoves": ["CROSS_CHOP", "PAYBACK"],
 		"weight": 2
 	},
 	{
@@ -220,11 +222,22 @@
 	{
 		"speciesId": "politoed",
 		"fastMove": "MUD_SHOT",
-		"chargedMoves": ["SURF", "EARTHQUAKE"]
+		"chargedMoves": ["WEATHER_BALL_WATER", "BLIZZARD"]
 	},
 	{
 		"speciesId": "politoed_shadow",
-		"fastMove": "MUD_SHOT"
+		"fastMove": "MUD_SHOT",
+		"chargedMoves": ["WEATHER_BALL_WATER", "BLIZZARD"]
+	},
+	{
+		"speciesId": "politoed_xl",
+		"fastMove": "MUD_SHOT",
+		"chargedMoves": ["WEATHER_BALL_WATER", "BLIZZARD"]
+	},
+	{
+		"speciesId": "politoed_shadow_xl",
+		"fastMove": "MUD_SHOT",
+		"chargedMoves": ["WEATHER_BALL_WATER", "BLIZZARD"]
 	},
 	{
 		"speciesId": "moltres",
@@ -255,10 +268,6 @@
 	{
 		"speciesId": "magnezone",
 		"chargedMoves": ["WILD_CHARGE", "MIRROR_SHOT"]
-	},
-	{
-		"speciesId": "ninetales",
-		"chargedMoves": ["OVERHEAT", "PSYSHOCK"]
 	},
 	{
 		"speciesId": "kangaskhan",
@@ -295,9 +304,13 @@
 		"chargedMoves": ["PSYSHOCK", "BULLDOZE"]
 	},
 	{
+		"speciesId": "bronzong_xl",
+		"chargedMoves": ["PSYSHOCK", "BULLDOZE"]
+	},
+	{
 		"speciesId": "cresselia",
 		"fastMove": "PSYCHO_CUT",
-		"chargedMoves": ["FUTURE_SIGHT", "MOONBLAST"],
+		"chargedMoves": ["GRASS_KNOT", "MOONBLAST"],
 		"weight": 40
 	},
 	{
@@ -414,7 +427,11 @@
 	},
 	{
 		"speciesId": "ninetales_alolan",
-		"fastMove": "CHARM"
+		"fastMove": "POWDER_SNOW"
+	},
+	{
+		"speciesId": "ninetales_alolan_xl",
+		"fastMove": "POWDER_SNOW"
 	},
 	{
 		"speciesId": "muk_alolan",

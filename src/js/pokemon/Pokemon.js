@@ -1251,7 +1251,7 @@ function Pokemon(id, i, b){
 		if((self.isCustom)||(self.startStatBuffs[0] != 0)||(self.startStatBuffs[1] != 0)){
 			var arr = [self.level];
 
-			arr.push(self.ivs.atk, self.ivs.def, self.ivs.hp, self.startStatBuffs[0]+gm.data.settings.maxBuffStages, self.startStatBuffs[1]+gm.data.settings.maxBuffStages, self.baitShields ? 1 : 0);
+			arr.push(self.ivs.atk, self.ivs.def, self.ivs.hp, self.startStatBuffs[0]+gm.data.settings.maxBuffStages, self.startStatBuffs[1]+gm.data.settings.maxBuffStages, self.baitShields ? 1 : 0, self.optimizeMoveTiming ? 1 : 0);
 
 			// Stat buffs are increased by 4 so the URL doesn't have to deal with parsing negative numbers
 

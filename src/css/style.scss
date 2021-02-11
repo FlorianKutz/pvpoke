@@ -456,6 +456,34 @@ header{
 			}
 		}
 
+		.damage-adjustments{
+			display:flex;
+			border: 1px solid #888;
+		    border-radius: 8px;
+			font-size:10px;
+			justify-content: center;
+			text-align: center;
+			margin: 5px 0 10px 0;
+
+			.adjustment{
+				padding:5px;
+				width:50%;
+
+				.value{
+					font-size:14px;
+					font-weight:bold;
+
+					&.buff{
+						color:$color-stat-buff;
+					}
+
+					&.debuff{
+						color:$color-stat-debuff;
+					}
+				}
+			}
+		}
+
 		.types {
 			text-align: center;
 
@@ -474,6 +502,14 @@ header{
 
 			&.cp{
 				text-align:center;
+
+				.identifier{
+					display:inline-block;
+					width: 12px;
+				    height: 12px;
+				    border-radius: 20px;
+					background:#9e34ef;
+				}
 			}
 
 			&.section-title{
@@ -670,6 +706,7 @@ header{
 		}
 
 		.shield-baiting,
+		.optimize-timing,
 		.priority,
 		.negate-fast-moves{
 			text-align: left;
@@ -776,7 +813,7 @@ header{
 		}
 
 		.poke-count.error{
-			color:#b9008f;
+			color:#e66a19;
 		}
 
 		.format-select{
@@ -828,6 +865,10 @@ header{
 					box-shadow:0px 2px;
 				}
 
+				&.warning{
+					border: 3px solid #e66a19;
+				}
+
 				.name-container{
 					float:none;
 				}
@@ -872,6 +913,17 @@ header{
 
 		.quick-fill-buttons{
 			justify-content: space-around;
+		}
+
+		.team-warning{
+			display:none;
+			font-size: 12px;
+		    font-weight: bold;
+		    padding: 4px;
+		    border-radius: 8px;
+		    border: 3px solid #e66a19;
+		    color: #e66a19;
+			margin-bottom:5px;
 		}
 	}
 
@@ -3200,6 +3252,11 @@ a.download-csv{
 		.multi{
 			display:none;
 		}
+	}
+
+	.button.compare-poke{
+		font-size: 14px;
+		padding: 5px;
 	}
 
 }
