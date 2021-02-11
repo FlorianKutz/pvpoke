@@ -1,11 +1,11 @@
 var getBreakPoints = function(speciesId, league, moveset){
     var calcPointCallback = (poke, opp) => poke.calculateBreakpoints(opp);
-    calcPoints(speciesId, league, moveset, "guaranteedAttack", 41, calcPointCallback);
+    calcPoints(speciesId, league, moveset, "guaranteedAttack", 51, calcPointCallback);
 }
 
 var getBulkPoints = function(speciesId, league, moveset){
     var calcPointCallback = (poke, opp) => poke.calculateBulkpoints(opp);
-    calcPoints(speciesId, league, moveset, "guaranteedDefense", 41, calcPointCallback);
+    calcPoints(speciesId, league, moveset, "guaranteedDefense", 51, calcPointCallback);
 }
 
 var calcPoints = function(speciesId, league, moveset, sortCriteria, levelCap, calcPointCallback){
@@ -38,13 +38,12 @@ var calcPoints = function(speciesId, league, moveset, sortCriteria, levelCap, ca
         opponent.selectMove("charged", poke.moveset[1], 0);
         let breakpoint = calcPointCallback(pokemon, opponent);
         breakpoint.forEach(bp => {
-            bp.opponent = poke.speciesId;
-            bp.ownMove = moveset[0];
-            bp.oppMove = poke.moveset[0];
+            bp.opponent = opponent;
         });
         breakpoints = breakpoints.concat(breakpoint);
     }
     breakpoints.sort((bp1, bp2) => bp2[sortCriteria]-bp1[sortCriteria]);
+    console.log(pokemon);
     console.log(breakpoints);
 }
 
